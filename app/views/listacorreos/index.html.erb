@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="jumbotron">Lista de Correos</h1>
+
+<div class="col-sm-12">
+
+<div class="well">
+
+		<table class="table table-condensed">
+			
+		  <thead>
+		  	
+		    <tr>
+		      <th>Nombre</th>
+		      <th>Email</th>
+		      <th colspan="4"></th>
+		    </tr>
+		  </thead>
+		
+		  <tbody>
+		  	 	
+		    <% @listacorreos.each do |listacorreo| %>
+		
+		      <tr>
+		        <td><%= listacorreo.nombre %></td>
+		        <td><%= listacorreo.email %></td>
+		        <!-- <td><%= link_to 'Ver', listacorreo, :class=>'btn' %></td> -->
+		      </tr>
+		      
+		      <tr>
+		        <td><%= link_to 'Editar', edit_listacorreo_path(listacorreo), :class=>'btn btn-primary btn-sm btn-block' %></td>
+		        <td><%= link_to 'Borrar', listacorreo, method: :delete, data: { confirm: 'Borrar miembro de la lista. Seguro?' }, :class=>'btn btn-danger btn-sm btn-block' %></td>
+		      </tr>
+		      
+		    <% end %>
+		 
+		  </tbody>
+		</table>
+		
+</div>
+</div>
+
+<br>
+<div class="col-sm-12">
+<%= link_to 'Nuevo destinatario', new_listacorreo_path, :class=>"btn btn-primary btn-block" %>
+<%= link_to 'Volver', root_path, :class=>"btn btn-primary btn-block" %>
+</div>

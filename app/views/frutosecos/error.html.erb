@@ -1,0 +1,15 @@
+<% if @frutoseco.nil? %>
+<% else %>
+  <% if @frutoseco.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@frutoseco.errors.count, "error") %> impidieron guardar los datos:</h2>
+      <ul>
+      <% @frutoseco.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <% end %>
+  <br>
+  <%= link_to 'Ok', frutosecos_path, :class => 'btn btn-primary' %>

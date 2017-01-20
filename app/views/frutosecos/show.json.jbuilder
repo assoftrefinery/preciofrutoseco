@@ -1,0 +1,1 @@
+json.partial! "frutosecos/frutoseco", frutoseco: @frutoseco

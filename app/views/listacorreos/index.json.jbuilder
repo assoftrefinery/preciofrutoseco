@@ -1,0 +1,1 @@
+json.array! @listacorreos, partial: 'listacorreos/listacorreo', as: :listacorreo

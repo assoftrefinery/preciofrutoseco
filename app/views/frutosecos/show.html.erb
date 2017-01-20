@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre Fruto Seco:</strong>
+  <%= @frutoseco.nombrefrutoseco %>
+</p>
+
+
+<p>
+  <strong>Precio Fruto Seco:</strong>
+  <%= @frutoseco.preciofrutoseco %>
+</p>
+
+<%= link_to 'Editar', edit_frutoseco_path(@frutoseco) %> |
+<%= link_to 'Atras', frutosecos_path %>

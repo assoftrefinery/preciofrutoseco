@@ -1,0 +1,31 @@
+<%= form_for(@frutoseco) do |f| %>
+  <% if @frutoseco.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@frutoseco.errors.count, "error") %> impidieron guardar los datos:</h2>
+      <ul>
+      <% @frutoseco.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label 'Fruto Seco' %>
+    <br>
+    <%= f.text_field :nombrefrutoseco , :class => 'form-control', :disabled => true %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label 'Precio' %>
+    <br>
+    <%= f.number_field :preciofrutoseco , :step => "any", :class => 'form-control' %>
+  </div>
+   
+  <br>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+<% end %>

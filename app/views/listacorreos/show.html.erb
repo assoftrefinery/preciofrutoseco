@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<div class="well">
+	
+		<table class="table table-condensed">
+			<thead>
+				
+				<tr>
+				
+					<th><strong>Nombre</strong></th><th><strong>Email</strong></th>
+							
+				</tr>
+				
+			</thead>
+			
+			<tbody>
+				
+				<tr>
+		  			<td><%= @listacorreo.nombre %></td><td><%= @listacorreo.email %></td>
+				</tr>
+		
+			</tbody>
+		</table>	
+		
+		<br>
+		<br>
+		<br>
+		
+		<%= link_to 'Editar', edit_listacorreo_path(@listacorreo), :class=>'btn btn-primary btn-block'%>
+		<%= link_to 'Atras', listacorreos_path, :class=>'btn btn-primary btn-block' %>
+
+</div>

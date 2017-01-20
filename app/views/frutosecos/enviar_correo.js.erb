@@ -1,0 +1,3 @@
+<% flash.each do |type, message| %>
+  $("#notice").html('<%= j render partial: "shared/flashmessages" %>');
+<% end %>

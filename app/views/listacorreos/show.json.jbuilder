@@ -1,0 +1,1 @@
+json.partial! "listacorreos/listacorreo", listacorreo: @listacorreo

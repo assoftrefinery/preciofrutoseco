@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		
+	<h4>Precio actual de la almendra</h4>
+	
+	<table>
+			 <thead>
+			    <tr>
+			      <th>Nombre Fruto Seco</th>
+			      <th>Precio Fruto Seco Actual</th>
+			      <th colspan="3"></th>
+			    </tr>
+			  </thead>
+			
+			  <tbody>
+			    <% @frutosecos.each do |frutoseco| %>
+			     <tr>
+			        <td><%= frutoseco.nombrefrutoseco %></td>
+			        <td><%= number_to_currency(frutoseco.preciofrutoseco, locale: :es) %></td>
+			     </tr>  
+			    <% end %>
+			  </tbody>
+	</table>
+	
+	</body>
+	<footer>
+		 <p><small><i>Precios válidos salvo error u omisión</i></small></p>
+	</footer>
+</html>
